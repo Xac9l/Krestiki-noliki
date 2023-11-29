@@ -11,9 +11,12 @@ def nachalo():
             print('Вы ввели неверный ответ!')
             continue
 def otobrajenie_karty(karta):
+    c = 0
     for elem in karta:
         print(' | '.join(elem))
-        print('-' * 9)
+        c += 1
+        if c < 3:
+            print('-' * 9)
 def proverka_pobeditel(karta):
     for i in range(3):
         if karta[0][i] == karta[1][i] == karta[2][i] != ' ' or karta[i][0] == karta[i][1] == karta[i][2] != ' ':
@@ -31,8 +34,8 @@ def game():
     player = 'X'
     otobrajenie_karty(karta)
     while True:
-        stroka = int(input(f'Игрок {player}, введите номер строки (0 - 2): '))
-        stolb = int(input(f'Игрок {player}, введите номер столбца (0 - 2): '))
+        stroka = int(input(f'Игрок {player}, введите номер строки (1 - 3): ')) - 1
+        stolb = int(input(f'Игрок {player}, введите номер столбца (1 - 3): ')) - 1
         if stroka < 0 or stroka > 2 or stolb < 0 or stolb > 2:
             print('Вы ввели неверные координаты!')
             continue
