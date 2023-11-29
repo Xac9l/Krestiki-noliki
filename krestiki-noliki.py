@@ -2,9 +2,9 @@ def nachalo():
     while True:
         print('Вы хотите начать игру? (Y - Да, N - Нет)')
         otvet = input()
-        if otvet == 'Y':
+        if otvet == 'Y' or 'y':
             game()
-        elif otvet == 'N':
+        elif otvet == 'N' or 'n':
             print('Игры не будет.')
             break
         else:
