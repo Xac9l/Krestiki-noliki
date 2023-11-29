@@ -31,8 +31,8 @@ def game():
     player = 'X'
     otobrajenie_karty(karta)
     while True:
-        stroka = int(input(f'Игрок {player}, введите номер строки: '))
-        stolb = int(input(f'Игрок {player}, введите номер столбца: '))
+        stroka = int(input(f'Игрок {player}, введите номер строки (0 - 2): '))
+        stolb = int(input(f'Игрок {player}, введите номер столбца (0 - 2): '))
         if stroka < 0 or stroka > 2 or stolb < 0 or stolb > 2:
             print('Вы ввели неверные координаты!')
             continue
